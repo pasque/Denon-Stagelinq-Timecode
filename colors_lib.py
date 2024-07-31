@@ -5,7 +5,7 @@ import webcolors
 from dataclasses import dataclass, field, asdict, InitVar
 from scipy.spatial import KDTree
 from webcolors import (
-  CSS3_NAMES_TO_HEX,
+  name_to_hex,
   hex_to_rgb,
 )
 import numpy as np
@@ -353,7 +353,7 @@ def sort_colors(colors, source):
 
 def convert_rgb_to_names(rgb_tuple):
     # a dictionary of all the hex and their respective names in css3
-    css3_db = CSS3_NAMES_TO_HEX
+    css3_db = name_to_hex
     names = []
     rgb_values = []
     for color_name, color_hex in css3_db.items():

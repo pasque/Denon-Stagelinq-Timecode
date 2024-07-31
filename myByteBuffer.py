@@ -17,7 +17,8 @@
 
 
 import struct
-
+import time
+import ReadContext
 
 class InvalidMarkError(RuntimeError):
     pass
